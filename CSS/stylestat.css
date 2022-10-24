@@ -1,0 +1,20 @@
+#background {
+    background-color: darkgray;
+}
+
+#header {
+    text-align: center;
+}
+
+#border {
+    border-style: solid;
+    height: 250px;
+    width: 500px;
+    margin: auto;
+}
+
+#stats {
+    height: 249px;
+    width: 499px;
+
+}

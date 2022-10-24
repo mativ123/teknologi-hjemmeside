@@ -1,0 +1,46 @@
+#points {
+    margin-top: 7%;
+    text-align: center;
+
+}
+
+#border {
+    background-color: black;
+    height: 15px;
+    margin-bottom: 50px;
+}
+
+.img {
+    width: 250px;
+    height: 150px;
+    position: relative;
+    padding-left:50px;
+}
+
+#toff {
+    width: 230px;
+    padding-left: 20px;
+}
+
+.bel {
+    margin-left: 10.5%;
+
+}
+#background {
+    background-color: darkgray;
+}
+
+#cola {
+    width: 200px;
+    padding-left: 35px;
+}
+
+#cola12 {
+    padding-left: 70px;
+    width: 150px;
+}
+
+#cola24 {
+    width: 150px;
+    padding-left: 90px;
+}
