@@ -15,8 +15,10 @@
     height: 150px;
     position: relative;
     padding-left:50px;
+
     padding-bottom: 70px;
     text-align: center;
+
 }
 
 #toff {
@@ -24,6 +26,10 @@
     padding-left: 20px;
 }
 
+.bel {
+    margin-left: 10.5%;
+
+}
 #background {
     background-color: darkgray;
 }
