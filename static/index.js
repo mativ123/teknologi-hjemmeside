@@ -1,11 +1,32 @@
 var point = 0;
-var tPoint = point;
 var kurvList = [];
+var promille = "";
 
-function plusPoint(n)
+async function httpGetAsync(daurl)
 {
-    point += n;
+    const response = await fetch(daurl);
+    if(response.ok)
+    {
+        return await response.json();
+    }
 }
+
+function render()
+{
+    fetch("/api/update").then((res) => {
+        res.json().then((json) => {
+            point = json["num"];
+            if(json["alk"] != "")
+            {
+                promille = json["alk"];
+            }
+        });
+    });
+
+    setTimeout(render, 1000);
+}
+
+render()
 
 function addKurv(str, n)
 {
@@ -13,18 +34,19 @@ function addKurv(str, n)
     {
         kurvList.push(str);
         document.getElementById("kurvList").innerHTML = kurvList;
-        plusPoint(-n);
+        point -= n
+        fetch('/api/remove', {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body:   JSON.stringify({"amount": n}),
+        })
     }
 }
 
 function main()
 {
-
-    if(tPoint != point)
-    {
-        document.getElementById("points").innerHTML = "Points: " + point;
-        tPoint = point;
-    }
+    document.getElementById("points").innerHTML = "Points: " + point;
+    document.getElementById("alkohol").innerHTML = "Promille: " + promille;
 
     setTimeout(main, 10);
 }

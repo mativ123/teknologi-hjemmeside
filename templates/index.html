@@ -1,12 +1,15 @@
 <html>
-<head>
-<a href="{{url_for('static', filename='main.html')}}">Home</a>
-    <a href="/statistik">Statestik</a>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-</head>
+    <head>
+        <a href="{{url_for('static', filename='main.html')}}">Home</a>
+        <a href="/statistik">Statestik</a>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
     <body id="background">
 
-        <h1 id="points">Points: 0</h1>
+        <div>
+            <h1 id="points">Points: 0</h1>
+            <h1 id="alkohol">Promille: 0</h1>
+        </div>
 
         <div id="border"></div>
         <div class="img">
@@ -40,7 +43,6 @@
             <div class="border"></div>
             <p id="kurvList">Tom</p>
         </div>
-
         <script src="{{url_for('static', filename='index.js')}}"></script>
     </body>
 </html>
